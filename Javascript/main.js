@@ -45,3 +45,23 @@ inputBox.addEventListener("input", function() {
         resultBox.classList.remove("show");
     }
 });
+
+$('.fa-magnifying-glass').on('click', function(){
+    let searchValue = inputBox.value.trim().toLowerCase();
+    let result = availableKeywords.find(keyword => keyword.toLowerCase() === searchValue);
+    if (result) {
+        if (searchValue === "docker") {
+            window.location.href = "Pages/docker/Documentation.html";
+        } else if (searchValue === "aws") {
+            window.location.href = "Pages/aws/Documentation.html";
+        } else if (searchValue === "jenkins") {
+            window.location.href = "Pages/jenkins/Documentation.html";
+        } else if (searchValue === "linux") {
+            window.location.href = "Pages/linux/Documentation.html";
+        } else if (searchValue === "ansible") {
+            window.location.href = "Pages/ansible/Documentation.html";
+        }
+    } else {
+        window.location.href = "/Pages/notFound/error.html";
+    }
+});
