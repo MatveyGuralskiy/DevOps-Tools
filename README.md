@@ -62,6 +62,10 @@
 
   <img src="Screens/Pages/Homepage-1.png" alt="logo" width="900" height="auto" />
 </div>
+<h2>© License</h2>
+<p>
+Distributed under the MIT license. See LICENSE.txt for more information.
+</p>
 <h2>📢 Additional Information</h2>
 <p>
   I hope you liked my project, don’t forget to rate it and if you notice a code malfunction or any other errors.
