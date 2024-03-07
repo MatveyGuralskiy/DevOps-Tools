@@ -14,7 +14,7 @@
     font-style: normal;
 }
 
-body{
+body {
     background-image: url(../background/background.jpg);
     background-size: cover;
     margin: 0;
@@ -66,7 +66,7 @@ header:hover .hover-subtext {
     padding: 10px;
 }
 
-.container{
+.container {
     position: relative;
     width: 400px;
     height: 110px;
@@ -80,7 +80,6 @@ header:hover .hover-subtext {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
 }
 
 .search input{
@@ -95,7 +94,6 @@ header:hover .hover-subtext {
     font-size: 25px;
     font-weight: 300;
     color: black;
-
 }
 
 .search button{
@@ -116,4 +114,37 @@ header:hover .hover-subtext {
 .search i{
     position: absolute;
     font-size: 28px;
+}
+
+.result-box {
+    list-style: none;
+    border-radius: 20px;
+    padding: 15px 10px;
+    font-weight: 300;
+    margin-left: 5px;
+    font-size: 25px;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 20px;
+    width: 400px;
+    position: relative;
+    right: 35px;
+}
+
+.result-box ul li:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.result-box {
+    max-height: 300px;
+    overflow-y: hidden;
+    display: none;
+}
+
+.result-box.show {
+    display: block;
+}
+
+.result-box.show-scrollbar {
+    overflow-y: auto;
 }

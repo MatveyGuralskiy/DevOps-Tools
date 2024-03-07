@@ -9,7 +9,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/main.css">
     <title>DevOps Tools</title>
 </head>
 <body>
@@ -17,15 +17,24 @@
         <a href="https://github.com/MatveyGuralskiy"><h1 class="lato-thin">DevOps&nbsp;<span>Tools</span></h1></a>
         <span class="hover-subtext lato-thin">Search for Documentation <p>@MatveyGuralskiy</p></span>
     </header>
-    <div id="content">
+    <main>
         <div class="container">
             <div class="search">
                 <i class="fa-solid fa-file"></i>
-                <input type="text" placeholder="Enter Your Tool" class="lato-thin">
+                <input type="text" id="input-box" placeholder="Enter Your Tool" class="lato-thin" autocomplete="off">
                 <button class="fa-solid fa-magnifying-glass"></button>
             </div>
-    </div>
+            <div class="result-box lato-thin">
+                <ul>
+                    <li>AWS</li>
+                    <li>Ansible</li>
+                    <li>Docker</li>
+                    <li>Jenkins</li>
+                    <li>Linux</li>
+                </ul>
+            </div>
+    </main>
     <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
-    <script src="Javascript/script.js"></script>
+    <script src="Javascript/main.js"></script>
 </body>
 </html>
