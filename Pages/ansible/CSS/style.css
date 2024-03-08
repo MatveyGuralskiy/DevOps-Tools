@@ -1,0 +1,133 @@
+/* Style files for Ansible Page */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+.lato-thin {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+body {
+    background-image: url(../Background/background.jpg);
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 250;
+    color: white;
+    
+}
+
+header a {
+    text-decoration: none;
+}
+
+header button {
+    position: fixed;
+    top : 50px;
+    left: 10px;
+    margin: 5px;
+    padding: 10px;
+    font-size: 30px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 100%;
+}
+
+header button:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.733);
+}
+
+header img {
+    height: 350px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header img:hover {
+    background-color: white;
+    border-radius: 100%;
+}
+
+.hover-subtext {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+header:hover .hover-subtext {
+    opacity: 1;
+}
+
+.hover-subtext {
+    font-size: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hover-subtext p {
+    color:burlywood;
+    padding: 10px;
+}
+
+h1 span {
+    color: burlywood;
+}
+
+
+h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 280;
+    color: white;
+    color: burlywood;
+}
+
+h3 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 300;
+    color: white;
+}
+
+.window {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 600px;
+    font-size: 25px;
+    transition: 0.5s ease-out;
+}
+
+.window:hover {
+    background-color: rgba(255, 255, 255, 0.733);
+}
+
+.yaml {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 600px;
+    font-size: 30px;
+    color: rgb(49, 45, 9);
+}
+
+.yaml:hover {
+    background-color: rgba(255, 255, 255, 0.733);
+}
+
+#button {
+    margin-bottom: 300px;
+    position: absolute;
+}
+
+main span {
+    background-color: rgb(44, 27, 27);
+    color: white;
+}
