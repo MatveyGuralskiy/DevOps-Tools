@@ -57,10 +57,17 @@
 <br>
 
 <h2>🌄 Screens of the Project</h2>
-<p>Homepage of the Website: </p>
+<h3>Homepage of the Website: </h3>
+<br>
+<br>
 <div align="center">
-
   <img src="Screens/Pages/Homepage-1.png" alt="logo" width="900" height="auto" />
+</div>
+<h3>Ansible Documentation Page: </h3>
+<br>
+<br>
+<div align="center">
+  <img src="Screens/Pages/Ansible_Page.png" alt="ansible" width="900" height="auto" />
 </div>
 <h2>© License</h2>
 <p>
