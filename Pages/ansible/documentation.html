@@ -3,9 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../ansible/CSS/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <title>DevOps-Tools</title>
 </head>
-<body>
-    <h1>Ansible Works!</h1>
+<body class="lato-thin">
+    <header>
+        <a href="https://docs.ansible.com/"><h1>Ansible <span>Documentation</span></h1></a>
+        <a href="../../index.html"><button type="button" class="fa-solid fa-rotate-left"></button></a>
+        <span class="hover-subtext lato-thin">Search for Documentation <p>@MatveyGuralskiy</p></span>
+        <img src="Icon/ansible.ico" alt="Ansible icon">
+    </header>
+    <main>
+        <h2>Introduction to Ansible for DevOps Beginners</h2>
+        <h3>About the Ansible</h3>
+        <p class="window">
+            Ansible is an open-source automation tool that simplifies configuration management,<br>
+            application deployment, and task automation. <br>
+            It is particularly useful for DevOps professionals who aim to streamline <br>
+            and automate various aspects of IT infrastructure management. <br>
+        </p>
+        <h3>Getting Started</h3>
+        <p class="window">
+            Installation
+            Before using Ansible, ensure it is installed on your system. <br> 
+            You can install it using package managers like apt or yum. For example, on Ubuntu:
+            <br>
+            <br>
+            <strong>Open the Terminal (Ctrl+T)</strong><br>
+            <br>
+            First of all we need to update our packages:<br>
+            <span>sudo apt update</span><br>
+            <br>
+            After that we can install our tool:<br>
+            In Debian or Ubuntu:<br>
+            <span>sudo apt install ansible</span><br>
+            <br>
+            In RedHat or CentOS:<br>
+            <span>sudo yum install ansible</span>
+        </p>
+        <br>
+        <br>    
+        <h3>Inventory</h3>
+        <p class="window">
+            Ansible uses an inventory file to specify the hosts it will manage.<br>
+            Create an inventory file (hosts.txt) and define your target hosts:<br>
+            <br>
+            <strong>How to define your target hosts in inventory file:</strong><br>
+            <br>
+            [web_servers]<br>
+            web1 ansible_host=192.168.1.101<br>
+            web2 ansible_host=192.168.1.102<br>
+            [name_of_group] <br>
+            nameOfServer ansible_host=IP address <br>
+            <br>
+            You can add for example staging group, production group and etc<br> 
+        </p>
+        <br>
+        <br>
+        <h3>Writing Playbooks</h3>
+        <p class="window">
+            Playbooks are Ansible's configuration, deployment, and orchestration language.<br>
+            They are written in YAML and describe the desired state of a system.<br>
+        </p>
+        <p class="yaml">
+            <strong>Example of Playbook:</strong><br>
+            <br>
+            Create yaml file for example playbook.yaml<br>
+            At the start of the file we used 3 times "-"<br>
+            ---<br>
+            And at the end of the file we used 3 times dot "."<br>
+            ...<br>
+            Let's create a playbook<br>
+            <br>
+            <br>
+            ---<br>
+            - name: Main purpose of Playbook<br>
+            &nbsp;&nbsp;&nbsp;hosts: Name of group from inventory file to work<br>
+            &nbsp;&nbsp;&nbsp;become: true &nbsp;# Open all tasks with sudo permisions<br>
+            <br>
+            &nbsp;&nbsp;&nbsp;tasks: <br>
+            &nbsp;&nbsp;&nbsp;- name: Install Apache server<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;apt: name=apache2 #or httpd state=latest<br>
+                <br>
+                &nbsp;&nbsp;&nbsp;- name: Restart Apache service<br>
+                &nbsp;&nbsp;&nbsp;service: name=httpd state=started enabled=yes<br>
+                ...<br>
+        </p>
+        <br>
+        <br>
+        <h3>Run Playbook</h3>
+        <p class="window">Enter in terminal command:<br>
+            <br>
+            <span>ansible-playbook playbook.yml</span><br>
+            <br>
+            This command will run the playbook (playbook.yml) on the hosts specified in the inventory file.<br>
+            <br>
+            <strong>Ansible Modules</strong><br>
+            Ansible modules are reusable, standalone scripts that perform various tasks.<br>
+            Explore the Ansible Module Index to discover modules for your specific needs.<br>
+            <br>
+            <strong>Roles</strong><br>
+            Roles provide a framework for organizing playbooks and other files in a structured way.<br>
+            They promote code reuse and make playbooks more modular.<br>
+            <br>
+            <strong>Ansible Galaxy</strong><br>
+            Ansible Galaxy is a community hub for sharing Ansible roles.<br>
+            You can find pre-written roles for common tasks, making it easier to leverage community knowledge.<br>
+        </p>
+
+        <h3>Conclusion</h3>
+        <p class="window">
+            Ansible simplifies automation and configuration management for DevOps professionals.<br>
+            By understanding the basics of playbooks, modules, roles, and Ansible Galaxy,<br>
+            you can efficiently manage and automate your IT infrastructure.<br>
+            For more in-depth information, refer to the official Ansible documentation.<br>
+        </p>
+        <br>
+        <br>   
+    </main>
 </body>
 </html>
