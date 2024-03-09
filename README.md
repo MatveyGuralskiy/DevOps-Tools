@@ -31,15 +31,17 @@
 
 <h2>📂 Repository</h2>
 <p>
+  |-- /Background
+
   |-- /CSS
 
-  |-- /Javascript
+  |-- /Icons
 
+  |-- /Javascript
+       
   |-- /Pages
 
   |-- /Screens
-       
-  |-- /Background
        
   |-- LICENSE
        
