@@ -8,7 +8,7 @@
 }
 
 body {
-    background-image: url(../Background/background.jpg);
+    background-image: url(../Background/ansible.jpg);
     background-size: cover;
 }
 
@@ -16,28 +16,61 @@ h1 {
     text-align: center;
     font-size: 60px;
     font-weight: 250;
-    color: white;
-    
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.452);
+    padding: 20px;
+    font-weight: 350;  
 }
 
 header a {
     text-decoration: none;
 }
 
-header button {
-    position: fixed;
-    top : 50px;
-    left: 10px;
+#home {
+    position: absolute;
+    top : 70px;
+    left: 30px;
     margin: 5px;
     padding: 10px;
     font-size: 30px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    background-color: powderblue;
+    border-radius: 50%;
+    transition: 0.4s ease;
 }
 
-header button:hover {
+#info {
+    position: absolute;
+    top : 70px;
+    left: 110px;
+    margin: 5px;
+    padding: 10px;
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: powderblue;
+    border-radius: 50%;
+    transition: 0.4s ease;
+}
+
+#bug {
+    position: absolute;
+    top : 70px;
+    left: 190px;
+    margin: 5px;
+    padding: 10px;
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: powderblue;
+    border-radius: 50%;
+    transition: 0.4s ease;
+}
+
+#home:hover, #info:hover, #bug:hover {
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.733);
+    background-color: rgba(255, 255, 255, 0.863);
 }
 
 header img {
@@ -71,11 +104,12 @@ header:hover .hover-subtext {
 
 .hover-subtext p {
     color:burlywood;
-    padding: 10px;
+    
 }
 
 h1 span {
-    color: burlywood;
+    color: rgb(73, 62, 47);
+    font-weight: 350;
 }
 
 
@@ -130,4 +164,13 @@ h3 {
 main span {
     background-color: rgb(44, 27, 27);
     color: white;
+}
+
+.copyright {
+    background-color: white;
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+    font-weight: 370;
+    margin: 20px;
 }
