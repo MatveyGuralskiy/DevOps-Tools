@@ -71,6 +71,12 @@
 <div align="center">
   <img src="Screens/Pages/Ansible_Page.png" alt="ansible" width="900" height="auto" />
 </div>
+<h3>Not Found, Error Page: </h3>
+<br>
+<br>
+<div align="center">
+  <img src="Screens/Pages/NotFound.png" alt="ansible" width="900" height="auto" />
+</div>
 <h2>© License</h2>
 <p>
 Distributed under the MIT license. See LICENSE.txt for more information.
