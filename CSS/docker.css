@@ -8,7 +8,7 @@
 }
 
 body {
-    background-image: url(../Background/ansible.jpg);
+    background-image: url(../Background/docker.jpg);
     background-size: cover;
 }
 
@@ -16,10 +16,44 @@ h1 {
     text-align: center;
     font-size: 60px;
     font-weight: 250;
-    color: rgb(0, 0, 0);
-    background-color: rgba(255, 255, 255, 0.452);
+    color: white;
     padding: 20px;
-    font-weight: 350;  
+    font-weight: 350; 
+    background-color: rgba(255, 255, 255, 0.452);
+}
+
+header span {
+    color: dodgerblue;
+}
+
+.hide {
+display: none;
+}
+
+.show {
+display: block;
+}
+
+img {
+    display: grid;
+    margin: 0 auto;
+    cursor: pointer;
+    border-radius: 50%;
+    height: 900px;
+    object-fit: cover;
+}
+
+img:hover {
+    background-color: rgba(0, 0, 0, 0.030);
+}
+
+.copyright {
+    background-color: rgba(255, 255, 255, 0.452);
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+    font-weight: 370;
+    margin: 20px;
 }
 
 header a {
@@ -35,7 +69,7 @@ header a {
     font-size: 30px;
     width: 60px;
     height: 60px;
-    background-color: powderblue;
+    background-color: dodgerblue;
     border-radius: 50%;
     transition: 0.4s ease;
 }
@@ -49,7 +83,7 @@ header a {
     font-size: 30px;
     width: 60px;
     height: 60px;
-    background-color: powderblue;
+    background-color: dodgerblue;
     border-radius: 50%;
     transition: 0.4s ease;
 }
@@ -63,7 +97,7 @@ header a {
     font-size: 30px;
     width: 60px;
     height: 60px;
-    background-color: powderblue;
+    background-color: dodgerblue;
     border-radius: 50%;
     transition: 0.4s ease;
 }
@@ -71,18 +105,6 @@ header a {
 #home:hover, #info:hover, #bug:hover {
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0.863);
-}
-
-header img {
-    height: 350px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-header img:hover {
-    background-color: white;
-    border-radius: 100%;
 }
 
 .hover-subtext {
@@ -103,29 +125,19 @@ header:hover .hover-subtext {
 }
 
 .hover-subtext p {
-    color:burlywood;
-    
+    color:deepskyblue;
 }
 
 h1 span {
-    color: rgb(73, 62, 47);
+    color: dodgerblue;
     font-weight: 350;
 }
 
-
 h2 {
-    text-align: center;
-    font-size: 40px;
-    font-weight: 280;
-    color: white;
-    color: burlywood;
-}
-
-h3 {
-    text-align: center;
-    font-size: 30px;
     font-weight: 300;
+    font-size: 40px;
     color: white;
+    text-align: center;
 }
 
 .window {
@@ -133,44 +145,46 @@ h3 {
     border-radius: 5px;
     padding: 30px;
     margin: 30px auto;
-    max-width: 600px;
+    max-width: 1300px;
     font-size: 25px;
-    transition: 0.5s ease-out;
+    transition: 1s ease-in;
 }
 
-.window:hover {
+.window:hover, .window_code {
     background-color: rgba(255, 255, 255, 0.733);
 }
 
-.yaml {
+
+#about {
+    text-align: center;
+    transition: 1s ease-in;
+}
+
+#information {
+    text-align: center;
+    transition: 1s ease-in;
+}
+
+#installation {
+    font-size: 20px;
+    transition: 1s ease-in;
+}
+
+.window_code {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 5px;
     padding: 30px;
     margin: 30px auto;
-    max-width: 600px;
-    font-size: 30px;
-    color: rgb(49, 45, 9);
+    max-width: 1300px;
+    font-size: 25px;
+    transition: 1s ease-in;
 }
 
-.yaml:hover {
-    background-color: rgba(255, 255, 255, 0.733);
+.window_code span {
+    color: brown;
 }
 
-#button {
-    margin-bottom: 300px;
-    position: absolute;
-}
-
-main span {
-    background-color: rgb(44, 27, 27);
-    color: white;
-}
-
-.copyright {
-    background-color: rgba(255, 255, 255, 0.452);
-    font-size: 30px;
-    text-align: center;
-    padding: 20px;
-    font-weight: 370;
-    margin: 20px;
+li {
+    text-decoration: none;
+   list-style-type: none;
 }
