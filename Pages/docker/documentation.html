@@ -3,9 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DevOps-Tools</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="../../CSS/docker.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
-<body>
-    <h1>Docker Works!</h1>
+<body class="lato-thin">
+    <header>
+        <a href="https://github.com/MatveyGuralskiy" target="_blank"><h1>Docker <span>Documentation</span></h1></a>
+        <span class="hover-subtext lato-thin">Search for Documentation <p>&nbsp; @MatveyGuralskiy</p></span>
+        <h2>Introduction to Docker for DevOps Beginners</h2>
+        <h2>Click to the Docker Image</h2>
+        <a href="../../index.html"><button id="home" type="button" class="fas fa-arrow-left"></button></a>
+        <a href="https://docs.docker.com/"><button id="info" type="button" class="fas fa-info-circle"></button></a>
+        <a href="mailto:mathewguralskiy@gmail.com"><button id="bug" type="button" class="fas fa-bug"></button></a>
+    <section id="visible">
+        <img src="../../Icons/docker.png" alt="Docker icon"> 
+    </section>
+    </header>
+    <main>
+        <section class="hide" id="invisible">
+            <h2 id="about">About Docker</h2>
+            <p class="window" id="information">
+                Docker is a platform that enables developers to automate the deployment<br>of applications inside lightweight, portable containers.<br>
+                Containers are a way to package and run applications and their dependencies in a consistent environment.<br>
+                Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers.<br>
+                The service has both free and premium tiers. The software that hosts the containers is called Docker Engine.<br>
+                It was first released in 2013 and is developed by Docker, Inc.
+            </p><br>
+                <h2>Installation</h2>
+                <p class="window">To get started with Docker, you need to install Docker on your machine. Follow the installation instructions for your Debian/Ubuntu:</p>
+                <pre class="window_code" id="installation"><code>
+sudo apt update
+sudo apt install apt-transport-https
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt update
+sudo apt install docker-ce
+sudo systemctl status docker
+<span>#TO add Docker to sudo permissions use this command and restart bash</span>
+sudo usermod -aG docker $USER  
+                </code></pre>
+                <h2>Hello World</h2>
+                <p class="window">
+                    Once Docker is installed, you can run your first container.<br>
+                    Open a terminal or command prompt and type the following command:</p>
+                <pre class="window"><code>docker run hello-world</code></pre>
+                <p class="window">
+                    This command will download and run a simple "Hello World" container.<br> 
+                    It verifies that your Docker installation is working correctly.</p>
+                <h2>Main commands in Docker</h2>
+                <pre class="window"><code>
+docker images                  #To see list of all images
+docker ps                      #To see list of working processes
+docker ps -a                   #To see list of all processes of docker
+docker system prune -a         #Delete everything (Images,Containers,Cache)
+docker rm (CONTAINER ID)       #To remove Container
+docker rmi (CONTAINER ID)      #To remove Image
+docker kill (CONTAINER ID)     #To kill the working process
+docker stop (CONTAINER ID)     #To stop the working process
+docker pull nginx              #To download Docker Image of nginx
+                </code></pre>
+                <h2>Building Your Own Image</h2>
+                <p class="window">
+                    To deploy your applications with Docker, you'll need to create a Docker image. <br>
+                    Docker images are a lightweight, standalone, and executable package that includes your application code, runtime, libraries, and system tools.<br>
+                    Create a Dockerfile in your project directory with instructions on how to build your image. Here is a basic example:</p>
+                <pre class="window"><code># Dockerfile
+FROM amazonlinux                                   #Or any other distribution you want
+RUN yum -y update && \                             #Update packages and install Webserver
+    yum -y install httpd
+COPY ./(YOUR HTML).html /var/www/html/index.html   #Copy your file to Docker Container
+CMD ["/usr/sbin/httpd", "D", "FOREGROUND"]         #Command to Run it
+EXPOSE 80                                          #Open port 80 for Webserver
+                </code></pre>
+                <p class="window">
+                    After you create a Dockerfile copy your html file at the same directory with Dockerfile<br>
+                    <br>
+                    Now let's create a Docker Image<br>
+                    <br> 
+                    Build your Docker image using the following command:
+                </p>
+                <pre class="window"><code>docker build -t (YOUR NAME OF IMAGE):(YOUR TAG) .</code></pre>
+                <h2>Running Your Container</h2>
+                <p class="window">Once your image is built, you can run a container from it for example from port 8080 on localhost:</p>
+                <pre class="window"><code>docker run -it -p 8080:80 (YOUR NAME OF IMAGE):(YOUR TAG)</code></pre>
+                <p class="window">This command runs a container on port 8080 on your host to port 80 on the container, and uses the image you built.</p>
+                <h2>DockerHub</h2>
+                <p class="window">
+                    Docker Hub is a cloud-based registry service provided by Docker, Inc.<br> 
+                    It serves as a central repository for Docker images, allowing developers to share and distribute their containerized applications easily.<br> 
+                    Docker Hub is a fundamental component of the Docker ecosystem, providing a centralized platform for image storage, versioning, and collaboration.<br>
+                    <strong>Key Features:</strong><br>
+                    Image Hosting: Docker Hub allows users to host and share Docker images.<br>
+                    These images serve as pre-packaged, standalone units containing an application and its dependencies.<br>
+                    Public and Private Repositories: Users can create both public and private repositories on Docker Hub.<br> 
+                    Public repositories are accessible to everyone, while private repositories require authentication.<br>
+                    Collaboration: Docker Hub facilitates collaboration by enabling users to collaborate on Docker images through shared repositories.<br> 
+                    It supports team workflows and versioning.<br>
+                    Automated Builds: Docker Hub supports automated builds, allowing developers to link their GitHub or Bitbucket repositories.<br> 
+                    This feature triggers automatic image builds whenever changes are pushed to the linked repositories.<br>
+                </p>
+                <h2>Log in to Docker Hub from the Command Line:</h2>
+                <p class="window">
+                    Open a terminal or command prompt.
+                    Run the following command and enter your Docker Hub credentials:
+                </p>
+                <pre class="window"><code>docker login</code></pre>
+                <p class="window">
+                    Enter your credentials of Docker Hub (login and password or use a token)
+                </p>
+                <h2>How to Use Docker Hub</h2>
+                <p class="window">
+                    After you login to your Docker Hub, you can push your Docker Images<br>
+                    You also can download your or any other Docker Images from the Docker Hub<br>
+                </p>
+                <pre class="window"><code>docker push (YOUR NICKNAME OF DOCKERHUB)/(YOUR NAME OF IMAGE):(YOUR TAG)
+docker run -it -p (YOUR NICKNAME OF DOCKERHUB)/(YOUR NAME OF IMAGE):(YOUR TAG)</code></pre>
+                <ul class="window">
+                    For more documentation you can use this link:<br>
+                    <li><a href="https://docs.docker.com/" target="_blank">Docker Documentation</a></li>
+                </ul> 
+        </section>
+    </main>
+    <script src="../../Javascript/docker.js"></script>
+
+    <p class="copyright">
+        © Copyright DevOps-Tools - Designed by <strong>Matvey Guralskiy</strong> - Powered by <strong>JavaScript</strong>
+    </p>  
 </body>
 </html>
